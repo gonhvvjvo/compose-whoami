@@ -15,4 +15,4 @@ services:
 networks:
   default:
     external: true
-    name: bridge_traefik
+    name: bridge_frontend
