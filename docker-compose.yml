@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+
+  whoami:
+    image: "traefik/whoami"
+    container_name: "simple-service"
+    #labels:
+      #- "traefik.enable=true"
+      #- "traefik.http.routers.whoami.rule=Host(`whoami.localhost`)"
+      #- "traefik.http.routers.whoami.entrypoints=web"
+    restart: always
+    #ports:
+      #- 80:80
+networks:
+  default:
+    external: true
+    name: bridge_traefik
